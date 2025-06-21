@@ -2,6 +2,7 @@
 # Prueba técnica de SQL Y Spring Boot.
 
 Dentro del proyecto estará la imagen del modelo entidad-relación y a continuación estarán las consultas de la actividad 1 y los pasos a seguir para ejecutar la activiada 2.
+Para visualizar que la API funciona correctamente utilice POSTMAN 
 
 
 
