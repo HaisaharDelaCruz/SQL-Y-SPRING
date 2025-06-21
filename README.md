@@ -64,7 +64,7 @@ al entrar a la bd ya estará cargado el esquema y los datos debidamente insertad
 #### Obtener un Podcast por medio de su id
 
 ```http
-  GET /api/getPodcastById/{id}
+  POST /api/getPodcastById/{id}
 ```
 
 | Parameter | Type     | Description                       |
