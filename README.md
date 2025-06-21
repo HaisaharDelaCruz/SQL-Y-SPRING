@@ -67,10 +67,6 @@ al entrar a la bd ya estará cargado el esquema y los datos debidamente insertad
   GET /api/getPodcastById/{id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `int` | **Requiere**. Id para buscar el item |
-
 #### Añadir Podcast
 
 ```http
