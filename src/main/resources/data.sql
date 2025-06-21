@@ -1,6 +1,6 @@
-INSERT INTO Idiomas (Id, Idioma) VALUES (1, 'Español');
-INSERT INTO Idiomas (Id, Idioma) VALUES (2, 'Ingles');
-INSERT INTO Idiomas (Id, Idioma) VALUES (3, 'Frances');
+INSERT INTO Idiomas (Idioma) VALUES ('Español');
+INSERT INTO Idiomas (Idioma) VALUES ('Ingles');
+INSERT INTO Idiomas (Idioma) VALUES ('Frances');
 
 INSERT INTO Podcast (Nombre_Podcast, Descripcion, Fecha_Publicacion, Fecha_Expiracion, PortadaURL, GeneroURL) 
 VALUES ('Radio Paini', 'Podcast de Paini donde entrevista a figuras destacadas de la música.', '2021-01-10', '2026-01-10', 'https://servidor.com/images/RadioPaini-tema.jpg', 'https://servidor.com/generos/desarrollo-personal');
@@ -14,6 +14,8 @@ VALUES ('Doble G', 'Podcast de Gusgri donde entrevista a figuras destacadas de l
 INSERT INTO Podcast_Idioma (IdiomaId, PodcastId) VALUES (1, 1);
 INSERT INTO Podcast_Idioma (IdiomaId, PodcastId) VALUES (2, 1);
 INSERT INTO Podcast_Idioma (IdiomaId, PodcastId) VALUES (3, 1);
+INSERT INTO Podcast_Idioma (IdiomaId, PodcastId) VALUES (1, 2);
+INSERT INTO Podcast_Idioma (IdiomaId, PodcastId) VALUES (1, 3);
 
 INSERT INTO Episodio (PodcastId, Nombre_Episodio, Fecha_Publicacion, Duracion, AudioURL, ImagenURL) 
 VALUES (1, 'Entrevista con Leon Larregui', '2021-02-10', 45.50, 'https://servidor.com/audios/leonlarregui.mp3', 'https://servidor.com/images/episodio-leon.jpg');
