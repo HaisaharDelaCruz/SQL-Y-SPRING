@@ -1,17 +1,22 @@
 
+
 # Prueba técnica de SQL Y Spring Boot.
 
 Dentro del proyecto estará la imagen del modelo entidad-relación y a continuación estarán las consultas de la actividad 1 y los pasos a seguir para ejecutar la activiada 2.
-Para visualizar que la API funciona correctamente utilice POSTMAN 
+Para visualizar que la API funciona correctamente utilice POSTMAN.
 
+## Herramientas VSCODE
 
-
+- Spring Initializr Java Support
+- Extension Pack for Java
 
 ## Actividad 1
 
 - Escribe la consulta SQL que recupere todos los podcasts vigentes quetengan más de un episodio 
 
 ```bash
+SQL
+
 select p.* 
 from podcast p JOIN episodio e ON e.PodcastId = p.id 
 where p.Fecha_Expiracion > GETDATE() 
@@ -20,15 +25,31 @@ p.portadaurl, p.generourl
 HAVING COUNT(e.id) > 1;
 ```
 
+```bash
+H2
+
+select p.*
+from podcast p
+JOIN episodio e ON e.PodcastId = p.id
+where p.Fecha_Expiracion > CURRENT_DATE
+GROUP BY p.id, p.Nombre_Podcast, p.descripcion, p.Fecha_Publicacion, p.Fecha_Expiracion,
+         p.portadaurl, p.generourl
+HAVING COUNT(e.id) > 1;
+```
+
 - Escribe la consulta que recupere todos los episodios de un podcast ordenados por el más reciente
 
 ```bash
+SQL Y H2
+
 select * from episodio Order By Fecha_Publicacion DESC;
 ```
 
 - Escribe la consulta que recupere el podcast con más idiomas disponibles
 
 ```bash
+SQL Y H2
+
 SELECT TOP 1 p.*, COUNT(pi.PodcastId) AS total_idiomas 
 FROM podcast p JOIN Podcast_Idioma pi ON pi.PodcastId = p.id 
 GROUP BY p.id, p.Nombre_Podcast, p.descripcion, p.Fecha_Publicacion, 
@@ -73,4 +94,6 @@ al entrar a la bd ya estará cargado el esquema y los datos debidamente insertad
 ```http
   POST /api/addPodcast
 ```
+
+
 
